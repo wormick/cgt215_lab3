@@ -25,16 +25,6 @@ void getChoices(float& A, float& B)
 	cin >> B;
 }
 
-void firstChoice(float A, float B) 
-{
-	cout << "This is proving the first choice ran" << endl;
-}
-
-void secondChoice(float A, float B)
-{
-	cout << "This is proving the second choice ran" << endl;
-}
-
 int main() {
 	int choice;
 	float A;
@@ -47,26 +37,26 @@ int main() {
 	if (choice == 1) 
 	{
 		cout << endl;
-		cout << A << "+" << B << "=" << A + B;
+		cout << A << " + " << B << " = " << A + B;
 	}
 
 	if (choice == 2) 
 	{
 
 		cout << endl;
-		cout << A << "-" << B << "=" << A - B;
+		cout << A << " - " << B << " = " << A - B;
 	}
 
 	if (choice == 3) 
 	{
 		cout << endl;
-		cout << A << "*" << B << "=" << A * B;
+		cout << A << " * " << B << " = " << A * B;
 	}
 
 	if (choice == 4) 
 	{
 		cout << endl;
-		cout << A << "/" << B << "=" << A / B;
+		cout << A << " / " << B << " = " << A / B;
 	}
 
 	if (choice > 4)
