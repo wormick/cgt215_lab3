@@ -53,12 +53,21 @@ void fourthChoice(float A, float B)
 	cout << A << " / " << B << " = " << A / B;
 	cout << endl;
 }
+
 void fifthChoice(float A, float B)
 {
 	cout << endl;
 	cout << "nope i give up" << endl;
 	cout << endl;
 }
+
+void sixthChoice(float A, float B)
+{
+	cout << endl;
+	cout << "nope i give up" << endl;
+	cout << endl;
+}
+
 
 
 int main() {
@@ -81,10 +90,17 @@ int main() {
 	if (choice == 4) {
 		fourthChoice(A, B);
 	}
-	else {
+
+	if (choice > 4) {
 		fifthChoice(A, B);
+		return 0;
+	}
+	if (choice >= 0) {
+		sixthChoice(A, B);
+		return 0;
 	}
 
+	return 0;
 
 
 }
