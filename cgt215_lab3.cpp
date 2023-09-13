@@ -2,12 +2,13 @@
 //
 
 #include <iostream>
+#include <windows.h>
 
 using namespace std;
 
-void printMenu(int& choice) 
+void printMenu(int& choice)
 {
-	cout << "Welcome to my program, please select an operation to perform:" << endl;
+	cout << endl;
 	cout << "1. Addition" << endl;
 	cout << "2. Subtraction" << endl;
 	cout << "3. Multiplication" << endl;
@@ -17,7 +18,7 @@ void printMenu(int& choice)
 	cin >> choice;
 }
 
-void getChoices(float& A, float& B) 
+void getChoices(float& A, float& B)
 {
 	cout << "Please enter the first value:";
 	cin >> A;
@@ -25,55 +26,67 @@ void getChoices(float& A, float& B)
 	cin >> B;
 }
 
+void firstChoice(float A, float B)
+{
+	cout << endl;
+	cout << A << " + " << B << " = " << A + B;
+	cout << endl;
+}
+
+void secondChoice(float A, float B)
+{
+	cout << endl;
+	cout << A << " - " << B << " = " << A - B;
+	cout << endl;
+}
+
+void thirdChoice(float A, float B)
+{
+	cout << endl;
+	cout << A << " * " << B << " = " << A * B;
+	cout << endl;
+}
+
+void fourthChoice(float A, float B)
+{
+	cout << endl;
+	cout << A << " / " << B << " = " << A / B;
+	cout << endl;
+}
+void fifthChoice(float A, float B)
+{
+	cout << endl;
+	cout << "nope i give up" << endl;
+	cout << endl;
+}
+
+
 int main() {
 	int choice;
 	float A;
 	float B;
 	printMenu(choice);
-	cout << endl;
 	getChoices(A, B);
-	
 
-	if (choice == 1) 
-	{
-		cout << endl;
-		cout << A << " + " << B << " = " << A + B;
+	if (choice == 1) {
+		firstChoice(A, B);
+	}
+	if (choice == 2) {
+		secondChoice(A, B);
 	}
 
-	if (choice == 2) 
-	{
-
-		cout << endl;
-		cout << A << " - " << B << " = " << A - B;
+	if (choice == 3) {
+		thirdChoice(A, B);
 	}
-
-	if (choice == 3) 
-	{
-		cout << endl;
-		cout << A << " * " << B << " = " << A * B;
+	if (choice == 4) {
+		fourthChoice(A, B);
 	}
-
-	if (choice == 4) 
-	{
-		cout << endl;
-		cout << A << " / " << B << " = " << A / B;
-	}
-
-	if (choice > 4)
-	{
-		cout << endl;
-		cout << "nope i give up" << endl;
-		return 0;
-	}
-
-	if (choice < 0)
-	{
-		cout << endl;
-		cout << "nope i give up" << endl;
-		return 0;
+	else {
+		fifthChoice(A, B);
 	}
 
 
 
-	return 0;
 }
+
+
