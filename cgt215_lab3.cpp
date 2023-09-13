@@ -61,14 +61,6 @@ void fifthChoice(float A, float B)
 	cout << endl;
 }
 
-void sixthChoice(float A, float B)
-{
-	cout << endl;
-	cout << "nope i give up" << endl;
-	cout << endl;
-}
-
-
 
 int main() {
 	int choice;
@@ -80,25 +72,22 @@ int main() {
 	if (choice == 1) {
 		firstChoice(A, B);
 	}
-	if (choice == 2) {
+	else if (choice == 2) {
 		secondChoice(A, B);
 	}
 
-	if (choice == 3) {
+	else if (choice == 3) {
 		thirdChoice(A, B);
 	}
-	if (choice == 4) {
+	else if (choice == 4) {
 		fourthChoice(A, B);
 	}
 
-	if (choice > 4) {
+	else {
 		fifthChoice(A, B);
 		return 0;
 	}
-	if (choice >= 0) {
-		sixthChoice(A, B);
-		return 0;
-	}
+
 
 	return 0;
 
